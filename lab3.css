@@ -1,0 +1,52 @@
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-color:gray;
+}
+
+body
+{
+    font-family:monospace;
+    font-size:large;
+    color:white;
+    background-color:black;
+}
+
+footer
+{
+    background-color:gray;
+}
+
+h1
+{
+    font-size: xx-large;
+    color: darkblue;
+}
+h3
+{
+    font-size:x-large;
+    color: darkcyan;
+}
+
+th
+{
+    color: aqua;
+}
+
+table
+{
+    border-color: aquamarine;
+}
+
+#MiEstilacho
+{
+    font-size: xx-large;
+    color:black;
+}
+
+#MiEstilacho2
+{
+    color:green;
+}
