@@ -71,35 +71,25 @@ function contador (arr){
 function pre_prom(){
     var n = prompt("¿Cuántas filas quieres tener?");
     var m = prompt("¿Cuántas columnas quieres tener?");
-    var arr = [][];
-    for (i=0; i<n; i++){
-        for (j=0; j<m; i++){
-            arr[i][j]=prompt("Rengón "+(i+1)+", columna "+(j+1)+":");
-        }
-    }
-    prom(arr);
-}
-function prom (arr){
-    
-    var prom = [];
-    
-    for (i=0; arr[i]==null; i++){
-        for(j=0; arr[i][j]==null; j++){
-            prom[i]=prom[i]+arr[i][j];
-        }
-        prom[i]=(prom[i]/arr.length);
-        
-    }
-    
+    var arr = [];
     var T_results = document.getElementById("table2");
-    
-    for (i = 0; i < prom.length; i++){
+
+    for (i=0; i<n; i++){
+        for (j=0; j<m; j++){
+            arr[j]=prompt("Fila "+(i+1)+", número "+(j+1)+":");
+        }
         fila = T_results.insertRow();
         col = fila.insertCell();
-        col.innerHTML = String(prom[i]);
+        col.innerHTML = String(prom(arr));
     }
-
-    
+}
+function prom (arr){
+    var suma=0, result=0, i;
+    for (i=0; i<arr.length; i++){
+        suma=arr[i]+suma;        
+    }
+    result=(suma/arr.length);
+    return result;    
 }
     
 
