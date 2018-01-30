@@ -10,7 +10,7 @@
     <body>
         
         <header>
-            
+            <h1>Lab #5</h1>
         </header>
         
         
@@ -26,6 +26,112 @@
                     <br><br>
                     <input type="submit" value="Enviar">
                 </form>
+                
+            </section>
+            
+            
+            <section>
+                <h1>Store</h1>                    
+                <table>
+                    <form>
+                        <tr>
+                            <th> Producto </th>
+                            <th> Precio </th>
+                            <th> Cantidad </th>
+                            <th> Subtotal </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src = "cuadro.jpg" style="width: 200px">
+                            </td>
+                            <td>
+                                $1,000.00
+                            </td>
+                            <td>
+                                <select class= "cantidad" onchange="calcularSubTotal(0);">
+                                    </select>
+                            </td>
+                            <td>
+                                <div class = "subTotal">$0.00</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src = "trofeo.jpg" style="width: 200px">
+                            </td>
+                            <td>
+                                $1,500.00
+                            </td>
+                            <td>
+                                <select class = "cantidad" onchange="calcularSubTotal(1);">
+                                    </select>
+                            </td>
+                            <td>
+                                <div class = "subTotal">$0.00</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src = "codigo.jpg" style="width: 200px">
+                            </td>
+                            <td>
+                                $1,111.00
+                            </td>
+                            <td>
+                                <select class = "cantidad" onchange="calcularSubTotal(2);">
+                                    </select>
+                            </td>
+                            <td>
+                                <div class = "subTotal">$0.00</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                SubTotal
+                            </td>
+                            <td>
+                                <div id = "subTotal">$0.00</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                IVA
+                            </td>
+                            <td>
+                                <div id = "iva">$0.00</div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                Total
+                            </td>
+                            <td>
+                                <div id = "total">$0.00</div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Pagar" onclick="confirmarPago()">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </section>
+            
+            <section>
+                
+                
                 
             </section>
             
@@ -45,6 +151,8 @@
             <p>Autor: Alberto Martín Vélez</p>
             <p>Mail: A01208219@itesm.mx</p>
         </footer>
+        
+        
     <script type = "text/javascript" src = "lab5.js"></script>
     </body>
 
