@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Lab6"/>
+        <link rel="stylesheet" type="text/css" href="lab6.css">
+        <title> Lab5 </title>
+    </head>
+    <body>
+        
+        <div class="relative">
+            <h1>Lab #6</h1>
+            
+        </div>
+        <div >
+            <p id="notv" onmouseover="show();" onmouseout="hide();">Soy invisible - lol</p>
+            <p>Yo no soy invisible :( como lo de arriba</p>
+        </div>
+        
+        <div>
+            <h1>Preguntas</h1>
+            <ul>
+                <li><b>¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</b></li>
+                <ul>
+                <li>static     no le afecta top... ni nada de eso</li>
+                <li>relative   le afecta top, bottom, left...</li>
+                <li>fixed      siempre en el mismo lugar</li>
+                <li>absolute   se queda con su antecesor</li>
+                <li>sticky     le puedes dar scroll y luego se pega a un punto</li>
+                </ul>
+                <li><b>¿Cuáles son los valores estándar para la propiedad visibility?</b></li>
+                <ul>
+                    <li>visible    se ve</li>
+                    <li>hidden     no se ve pero ocupa espacio</li>
+                    <li>collapse   se usa en tablas para esconder filas o columnas desocupando ese espacio</li>
+                    <li>initial    usa la visiilidad inicial</li>
+                    <li>inherit    hereda de su padre su propiedad</li>
+                </ul>
+                <li><b>¿Qué es el zIndex y para qué sirve?</b></li>
+                <li>Es una propiedad en css/html que sirve para ver qué cosas se muestran sobre qué otras. Es útil para marcas e agua.</li>
+  
+            </ul>
+        </div>
+        
+        
+        <main>
+            
+            <section>
+                <h1 id="ctext">Pasword</h1>
+                <form onsubmit= "return checarForm(this);">
+                    <p>Ingresa tu contraseña:</p>
+				    <input type="password" placeholder="Albertto1" name = "pass1" required/>
+                    <p>Verifica tu contraseña: </p>
+                    <input type="password" placeholder="Albertto1" name = "pass2" required/>
+                    <br><br>
+                    <input  type="submit" value="Enviar" onmouseover="changeText()" onmouseout="changeText2()">
+                </form>
+                
+            </section>
+            
+            
+            <section>
+                <h1>Store</h1>                    
+                <table>
+                    <form>
+                        <tr>
+                            <th> Producto </th>
+                            <th> Precio </th>
+                            <th> Cantidad </th>
+                            <th> Subtotal </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src = "cuadro.jpg" style="width: 200px">
+                            </td>
+                            <td>
+                                $1,000.00
+                            </td>
+                            <td>
+                                <select class= "cantidad" onchange="calcularSubTotal(0);">
+                                    </select>
+                            </td>
+                            <td>
+                                <div class = "subTotal">$0.00</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src = "trofeo.jpg" style="width: 200px">
+                            </td>
+                            <td>
+                                $1,500.00
+                            </td>
+                            <td>
+                                <select class = "cantidad" onchange="calcularSubTotal(1);">
+                                    </select>
+                            </td>
+                            <td>
+                                <div class = "subTotal">$0.00</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src = "codigo.jpg" style="width: 200px">
+                            </td>
+                            <td>
+                                $1,111.00
+                            </td>
+                            <td>
+                                <select class = "cantidad" onchange="calcularSubTotal(2);">
+                                    </select>
+                            </td>
+                            <td>
+                                <div class = "subTotal">$0.00</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                SubTotal
+                            </td>
+                            <td>
+                                <div id = "subTotal">$0.00</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                IVA
+                            </td>
+                            <td>
+                                <div id = "iva">$0.00</div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                Total
+                            </td>
+                            <td>
+                                <div id = "total">$0.00</div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Pagar" onclick="confirmarPago()">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </section>
+            
+            <section>
+                
+            </section>
+            
+        </main>
+        
+        
+        
+        
+        
+
+        <footer>
+            <p>
+                <label id="MiEstilacho">Calificación: 
+                    0<input type="range" min="0" max="100" value="10"/>100
+                </label>
+            </p>
+            <p>Autor: Alberto Martín Vélez</p>
+            <p>Mail: A01208219@itesm.mx</p>
+        </footer>
+        
+        
+    <script type = "text/javascript" src = "lab6.js"></script>
+    </body>
+
+</html>

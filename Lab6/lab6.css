@@ -1,0 +1,42 @@
+{margin-top:auto;margin-bottom:auto;margin-left:auto;margin-right:auto;border-color:gray}body{font-family:monospace;font-size:large;color:white;background-color:black}footer{background-color:gray}h1{font-size:xx-large;color:darkblue}h3{font-size:x-large;color:darkcyan}th{color:aqua}table{border-color:aquamarine}#MiEstilacho{font-size:xx-large;color:black}#MiEstilacho2{color:green}
+
+
+div.relative {
+    position: relative;
+    width: 100%;
+    height: 75px;
+    border: 3px solid #8AC007;
+}
+
+.notv{
+    visibility: hidden;
+}
+
+body:after {
+  content: "Mi marca de agua"; 
+  font-size: 100px;  
+  color: rgba(52, 166, 214, 0.3);
+    z-index: -1;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+    
+      
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  -ms-pointer-events: none;
+  -o-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
