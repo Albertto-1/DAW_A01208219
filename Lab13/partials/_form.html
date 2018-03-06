@@ -46,35 +46,3 @@
         </div>
     </form>
   </div>
-
-<section>
-    <h5>Preguntas:</h5>
-    <ol>
-        <li>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?</li>
-        <ul>
-            <li>
-                Es una buena práctica primero limpiar todas las variables de la sesión y ya después eliminarla. 
-            </li>
-        </ul>
-        <li>¿Cuál es la diferencia entre una variable de sesión y una cookie?</li>
-        <ul>
-            <li>
-                Una cookie se almacena en el cliente (en su navegador por un tiempo) y las variables de sesión están en el servidor durante lo que dure la sesión.
-            </li>
-        </ul>
-        <li>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</li>
-        <ul>
-            <li>
-                Le agrega la fecha al nombre para que sean diferentes y no se sobreescriba.
-            </li>
-        </ul>
-        <li>¿Qué es CSRF y cómo puede prevenirse?</li>
-        <ul>
-            <li>
-                Es un tipo de exploit malicioso de un sitio web en el que comandos no autorizados son transmitidos por un usuario en el cual el sitio web confía.
-                Puede prevenirse con diferentes métodos como: Doble-posted cookie (envío doble de cookie), Unique form nonce (formulario único para cada solicitud), Requerir credenciales de autentificación nuevamente, One time Passwords.
-                Pienso que esta última aunque es tediosa es la mejor.
-            </li>
-        </ul>
-    </ol>
-</section>
