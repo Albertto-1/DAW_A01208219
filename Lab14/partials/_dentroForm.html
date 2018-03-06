@@ -1,0 +1,58 @@
+<br><br>
+
+<?php var_dump($foto); ?>
+<img src='uploads/' style = "float:left; width: 200px; height: 200px">
+
+Bienvenido <?php echo $nombre . " " . $apellido;?> 
+<br><br>
+<br><br>
+  <form action="create.php" method="POST" enctype="multipart/form-data">
+      <div class="input-field col s12">
+          <?php if (isset($_SESSION["error_archivo"]) != ""): ?>
+            <div class="card-panel">
+              <span class="red-text text-darken-2"><?=$_SESSION["error_archivo"] ?></span>
+            </div>
+          <?php endif; ?>
+        </div>
+    
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>Selecciona tu foto de perfil</span>
+        <input type="file" name="imagen">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" >
+      </div>
+    </div>
+    <div class="input-field col s6">
+          <input class="btn waves-effect waves-light" type="submit" value="Agregar">
+    </div>
+  </form>
+
+<br><br><br>
+
+<?php if(isset($_SESSION["nombre"])): ?>
+                <a class="btn waves-effect waves-light" href="logout.php" style = "float: right">Salir</a>
+<?php endif; ?>
+
+<section>    
+    <h4>Preguntas:</h4>            
+        <h5 id ="1">
+            ¿Qué es ODBC y para qué es útil?
+        </h5>
+        <p>Open Database Connectivity</p>
+        <p>Hace posible el acceder a cualquier dato desde cualquier aplicación, sin importar qué sistema de gestión de bases de datos (DBMS) esté almacenando los datos</p>
+        <h5>
+            ¿Qué es SQL Injection?
+        </h5>     
+        <p>Es un ataque a la base de datos en donde un usuario obtiene acceso a la misma y modifica la estructura.</p>
+        <h5>   
+            ¿Qué técnicas puedes utilizar para evitar ataques de SQL Injection?
+        </h5>       
+        <p>Tener solo un usuario que pueda modificar la estructura de la base de datos.</p>
+    <br><br>
+    <h5>Referencias:</h5>
+    <strong> <a href="#1">[1]</a> </strong>
+    "URL." Internet:<a href=https://es.wikipedia.org/wiki/Open_Database_Connectivity>https://es.wikipedia.org/wiki/Open_Database_Connectivity</a>, 21/11/2017 [Marzo 05, 2018]. 
+    <br><br><br>
+</section>
